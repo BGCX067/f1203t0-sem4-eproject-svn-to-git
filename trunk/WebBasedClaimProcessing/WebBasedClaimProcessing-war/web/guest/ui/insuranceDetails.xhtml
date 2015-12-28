@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:c="http://java.sun.com/jsf/core" xmlns:html="http://java.sun.com/jsf/html">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/contentTemplate.xhtml">
+            <ui:define name="content">
+                <div class="wrapper margin-bot">
+                    <div class="col-3">
+                      <div class="indent">
+                        <h2>International Health Insurance</h2>
+                        <p class="color-4"></p>
+                        <div class="wrapper p2">
+                          <figure class="img-indent"><img src="guest/source/images/page4-img1.png" alt="" /></figure>
+                          <div class="extra-wrap"> HealthCare International capitalising on more than 35 years experience in the Global International Health and Private Medical Insurance area. Throughout the world, the demand for first class International Health Insurance has never been greater. As social health insurance services that could once be relied upon are no longer able to keep pace with the ever increasing cost of medical treatment, so the need to make alternative arrangements has become of crucial importance, particularly to the expatriate. </div>
+                        </div>
+                        For those expats living and working abroad, accessing the right kind of health insurance cover can turn out to be a nightmare, with the cost of medical treatment often expensive and difficult to arrange particularly in an emergency.HealthCare International is a specialist provider of global private health and related personal insurances, designed to provide not just the basic health cover, but also a wide range of benefits providing peace of mind for you, your family or your personnel.  </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="block-news">
+                          <h3 class="color-4 p2" style="text-align: center">Insurance List</h3>
+                        <ul class="list-2">
+                          <li><a href="#">International Health and Medical Insurance</a></li>
+                          <li><a href="#">Worldwide Travel Insurance</a></li>
+                          <li><a href="#">Other International Insurance Products</a></li>
+                          <li><a href="#">Annual Multi-Trip And Single Trip Travel Insurance</a></li>
+                          <li><a href="#">Expatriate Health Insurance</a></li>
+                          <li><a href="#">Income Protection Life Cover</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

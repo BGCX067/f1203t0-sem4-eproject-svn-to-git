@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core" xmlns:html="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/formTemplate.xhtml">
+            <ui:define name="tab">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="Redirect?page=index">Home Page</a></li>
+                        <li><a href="Redirect?page=newsList">Our News</a></li>
+                        <li><a href="Redirect?page=guestMenu">Our Employees</a></li>
+                      <li><a  href="Redirect?page=insuranceList">Our Insurances</a></li>
+                      <li class="last-item"><a href="Redirect?page=contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </ui:define>
+            <ui:define name="content">
+                <div class="wrapper margin-bot">
+                    <div class="col-3">
+                      <div class="indent">
+                        <h2 class="px">Registration Form</h2>
+                        <form id="f" action="Register" method="post" >
+                            <table class="tbl1">
+                                <tr>
+                                    <td>Username </td>
+                                    <td><input type="text" name="username"/></td>
+                                    <td> <c:if test="${usernameError!=null}"><label style="color: red">${usernameError}</label> </c:if></td>
+                                </tr>
+                               
+                                <tr>
+                                    <td>Password </td>
+                                    <td><input type="password" name="password"/></td>
+                                    <td><c:if test="${passwordError!=null}"><label style="color: red">${passwordError}</label> </c:if></td>
+                                </tr>
+                                <tr>
+                                    <td>Employee ID </td>
+                                    <td><input type="text" name="EID"/></td><c:if test="${eidError!=null}"><label style="color: red">${eidError}</label> </c:if>
+                                </tr>
+                                <tr>
+                                    <td>Account Code </td>
+                                    <td><input type="text" name="accountCode"/></td><c:if test="${codeError!=null}"><label style="color: red">${codeError}</label> </c:if>
+                                </tr>
+                                <tr>
+                                    <td>Email </td>
+                                    <td><input type="text" name="email" /></td>
+                                    <c:if test="${emailError!=null}"><label style="color: red">${emailError}</label> </c:if>
+                                </tr>
+                                <tr>
+                                    <td>Address </td>
+                                    <td><input type="text" name="address"/></td>
+                                    <c:if test="${addressError!=null}"><label style="color: red">${addressError}</label> </c:if>
+                                </tr>
+                                <tr>
+                                    <td>Phone Number </td>
+                                    <td><input type="text" name="phoneNumber"/></td>
+                                    <c:if test="${phoneError!=null}"><label style="color: red">${phoneError}</label> </c:if>
+                                </tr>
+                                <tr>
+                                    <td>Image </td>
+                                    <td><p:fileUpload value="#{fileUploadController.file}"  mode="simple"/></td>
+                                    
+                                </tr>
+                                  
+                                <tr>
+                                    <td></td>
+                                    <td><div class="buttons"> <input type="reset" value="Clear" class="button-2"/> <input type="submit" value="Submit" class="button-2"/></div></td>
+                                </tr>
+                                
+                            </table>
+                            <h6 style="alignment-adjust: middle " ><c:if test="${eidcodeError!=null}"><label style="color: red">${eidcodeError}</label> </c:if></h6>
+                          </form>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="block-news">
+                        <h3 class="color-4 indent-bot2">Regulations</h3>
+                        <dl class="contact p3">
+                          <dt><span>Employee ID:</span>given by web admin</dt>
+                          <dd><span>Account Code:</span>given by web admin</dd>
+                          <dd><span>Email:</span>username@domain.com</dd>
+                          <dd><span>Phone Number:</span>+XXX (XX) XXX-XXXX</dd>
+                          <dd><span>Image :</span>.jpg images only</dd>
+                          <dd><span><b>Notice</b></span><text style="color: red">All fields except image are required!</text></dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

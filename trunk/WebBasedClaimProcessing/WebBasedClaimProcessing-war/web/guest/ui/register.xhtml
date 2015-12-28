@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:c="http://java.sun.com/jsf/core" xmlns:html="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/formTemplate.xhtml">
+            <ui:define name="content">
+                <div class="wrapper margin-bot">
+                    <div class="col-3">
+                      <div class="indent">
+                        <h2 class="px">Registration Form</h2>
+                        <form id="f" action="#" method="post" enctype="multipart/form-data">
+                            <table class="tbl1">
+                                <tr>
+                                    <td>Username </td>
+                                    <td><input type="text" name="username"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Password </td>
+                                    <td><input type="password" name="password"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Employee ID </td>
+                                    <td><input type="text" name="EID"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Account Code </td>
+                                    <td><input type="text" name="accountCode"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Email </td>
+                                    <td><input type="text" name="email"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Address </td>
+                                    <td><input type="text" name="address"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Phone Number </td>
+                                    <td><input type="text" name="phoneNumber"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Image </td>
+                                    <td><p:fileUpload value="#{fileUploadController.file}" mode="simple"/></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><div class="buttons"> <a class="button-2" href="#">Clear</a> <a class="button-2" href="#">Submit</a></div></td>
+                                </tr>
+                            </table>
+                          </form>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="block-news">
+                        <h3 class="color-4 indent-bot2">Regulations</h3>
+                        <dl class="contact p3">
+                          <dt><span>Employee ID:</span>given by web admin</dt>
+                          <dd><span>Account Code:</span>given by web admin</dd>
+                          <dd><span>Email:</span>username@domain.com</dd>
+                          <dd><span>Phone Number:</span>+XXX (XX) XXX-XXXX</dd>
+                          <dd><span>Image :</span>.png images only</dd>
+                          <dd><span><b>Notice</b></span><text style="color: red">All fields except image are required!</text></dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

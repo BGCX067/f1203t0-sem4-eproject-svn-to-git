@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:c="http://java.sun.com/jsf/core" xmlns:html="http://java.sun.com/jsf/html">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/formTemplate.xhtml">
+            <ui:define name="tab">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="faces/UI/Guest/index.xhtml">Home Page</a></li>
+                        <li><a href="faces/UI/Guest/newsList.xhtml">Our News</a></li>
+                        <li><a href="faces/UI/Guest/guestMenu.xhtml">Our Employees</a></li>
+                      <li><a href="#">Our Insurances</a></li>
+                      <li class="last-item"><a class="active" href="faces/UI/Guest/contact.xhtml">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </ui:define>
+            <ui:define name="content">
+                <div class="wrapper margin-bot">
+                    <div class="col-3">
+                      <div class="indent">
+                        <h2 class="px">Contact Form</h2>
+                        <form id="f" action="#" method="post" enctype="multipart/form-data">
+                            <table class="tbl1">
+                                <tr>
+                                    <td class="rc">Title </td>
+                                    <td><input type="text" name="title"/></td>
+                                </tr>
+                                <tr>
+                                    <td class="rc">Name </td>
+                                    <td><input type="text" name="name"/></td>
+                                </tr>
+                                <tr>
+                                    <td class="rc">Email </td>
+                                    <td><input type="text" name="email"/></td>
+                                </tr>
+                                <tr>
+                                    <td class="rc">Content </td>
+                                    <td><textArea/></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><div class="buttons"> <a class="button-2" href="#">Clear</a> <a class="button-2" href="#">Send</a></div></td>
+                                </tr>
+                            </table>
+                          </form>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="block-news">
+                        <h3 class="color-4 indent-bot2">Regulations </h3>
+                        <dl class="contact p3">
+                          <dt><span>Email:</span>username@domain.com</dt>
+                          <dd><span><b>Notice</b></span><text style="color: red">All fields are required!</text></dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

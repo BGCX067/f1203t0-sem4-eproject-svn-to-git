@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition>
+            <div class="wrap">
+                <div id="header">
+                    <div id="top">
+                            <div class="left">
+                                    <p>Welcome, <strong>Admin.</strong> [ <a href="">logout</a> ]</p>
+                            </div>
+                            <div class="right">
+                                    <div class="align-right">
+                                    </div>
+                            </div>
+                    </div>
+                    <div id="nav">
+                            <ul>
+                                    <li class="upp"><a href="#">Main control</a>
+                                            <ul>
+                                                    <li>&#8250; <a href="">Visit site</a></li>
+                                                    <li>&#8250; <a href="">Reports</a></li>
+                                            </ul>
+                                    </li>
+                                    <li class="upp"><a href="#">Manage Content</a>
+                                            <ul>
+                                                    <li>&#8250; <a href="">View News</a></li>
+                                                    <li>&#8250; <a href="">View Employees</a></li>
+                                                    <li>&#8250; <a href="">View Accounts</a></li>
+                                                    <li>&#8250; <a href="">View Insurances</a></li>
+                                                    <li>&#8250; <a href="">View Claims</a></li>
+                                                    <li>&#8250; <a href="">View Contacts</a></li>
+                                            </ul>
+                                    </li>
+                                    <li class="upp"><a href="#">Admin</a>
+                                            <ul>
+                                                    <li>&#8250; <a href="">Change Password</a></li>
+                                            </ul>
+                                    </li>
+                            </ul>
+                        </div>
+                </div>
+                <div id="content">
+                    <div id="sidebar">
+                        <div class="box">
+                                <div class="h_title">&#8250; Main control</div>
+                                <ul id="home">
+                                        <li class="b1"><a class="icon view_page" href="">Visit site</a></li>
+                                        <li class="b2"><a class="icon report" href="">Reports</a></li>
+                                </ul>
+                        </div>
+
+                        <div class="box">
+                                <div class="h_title">&#8250; Manage content</div>
+                                <ul>
+                                        <li class="b2"><a class="icon page" href="">View News</a></li>
+                                        <li class="b1"><a class="icon users" href="">View Employees</a></li>
+                                        <li class="b2"><a class="icon add_user" href="">View Accounts</a></li>
+                                        <li class="b1"><a class="icon add_page" href="">View Insurances</a></li>
+                                        <li class="b2"><a class="icon category" href="">View Claims</a></li>
+                                        <li class="b2"><a class="icon contact" href="">View Contacts</a></li>
+                                </ul>
+                        </div>
+                        <div class="box">
+                                <div class="h_title">&#8250; Admin</div>
+                                <ul>
+                                        <li class="b1"><a class="icon config" href="">Change Password</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                    <div id="main">
+                        <ui:insert name="main"></ui:insert>
+                    </div>
+                </div>
+                <div id="footer">
+                    <div class="left">
+                            <p>Design: <a href="http://p2pcorporation.com">Group 2</a> | Admin Panel: <a href="">http://p2pcorporation.com</a></p>
+                    </div>
+                    <div class="right">
+                            <p>Web Based Claim Processing</p>
+                    </div>
+                </div>
+            </div>
+        </ui:composition>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+        <ui:composition>
+            <link rel="stylesheet" type="text/css" href="admin/source/css/style.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="admin/source/css/navi.css" media="screen" />
+            <script type="text/javascript" src="admin/source/js/jquery-1.7.2.min.js"></script>
+            <script type="text/javascript">
+            $(function(){
+                    $(".box .h_title").not(this).next("ul").hide("normal");
+                    $(".box .h_title").not(this).next("#home").show("normal");
+                    $(".box").children(".h_title").click( function() { $(this).next("ul").slideToggle(); });
+            });
+            </script>
+        </ui:composition>
+    </head>
+    <body>
+    </body>
+</html>

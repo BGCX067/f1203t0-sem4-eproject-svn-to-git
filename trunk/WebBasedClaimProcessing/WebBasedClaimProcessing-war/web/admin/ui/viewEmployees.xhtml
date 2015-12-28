@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/admin/templates/indexTemplate.xhtml">
+            <ui:define name="main">
+                <div class="full_w">
+                    <div class="h_title">Employee List</div>
+                    <h2>Manage Employees</h2>
+                    <p>This panel allows you to manage all employees.</p>
+
+                    <div class="entry">
+                            <div class="sep"></div>
+                    </div>
+                    <table>
+                            <thead>
+                                    <tr>
+                                            <th scope="col">No.</th>
+                                            <th scope="col">EID</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Birthdate</th>
+                                            <th scope="col">ID No</th>
+                                            <th scope="col">Acc Code</th>
+                                            <th scope="col">Bank</th>
+                                            <th scope="col">Acc No</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col" style="width: 30px;">Modify</th>
+                                    </tr>
+                            </thead>
+
+                            <tbody>
+                                    <tr>
+                                            <td class="align-center">1</td>
+                                            <td>EM001</td>
+                                            <td>Daniel Dang</td>
+                                            <td>02-09-1992</td>
+                                            <td>938473849</td>
+                                            <td>AAC21</td>
+                                            <td>ACB</td>
+                                            <td>IK123</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon edit" title="Edit"></a>
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                            <td class="align-center">2</td>
+                                            <td>EM002</td>
+                                            <td>Marry Lu</td>
+                                            <td>02-10-1982</td>
+                                            <td>9384736483</td>
+                                            <td>AAB43</td>
+                                            <td>NCB</td>
+                                            <td>AB112</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_error.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon edit" title="Edit"></a>
+                                                    <a href="#" class="table-icon restore" title="Restore"></a>
+                                            </td>
+                                    </tr>
+
+                                    <tr>
+                                            <td class="align-center">3</td>
+                                            <td>PM003</td>
+                                            <td>Jackie Chan</td>
+                                            <td>19-09-1994</td>
+                                            <td>837483947</td>
+                                            <td>AAC22</td>
+                                            <td>ACB</td>
+                                            <td>IK229</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon edit" title="Edit"></a>
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>
+
+                                    <tr>
+                                            <td class="align-center">4</td>
+                                            <td>PM112</td>
+                                            <td>Jane Smith</td>
+                                            <td>02-12-1990</td>
+                                            <td>938473039</td>
+                                            <td>KMD98</td>
+                                            <td>BBC</td>
+                                            <td>MI123</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon edit" title="Edit"></a>
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>						
+                                    <tr>
+                                            <td class="align-center">5</td>
+                                            <td>EM001</td>
+                                            <td>Daniel Dang</td>
+                                            <td>02-09-1992</td>
+                                            <td>938473849</td>
+                                            <td>AAC21</td>
+                                            <td>ACB</td>
+                                            <td>IK123</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_error.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon edit" title="Edit"></a>
+                                                    <a href="#" class="table-icon restore" title="Restore"></a>
+                                            </td>
+                                    </tr>
+                            </tbody>
+                    </table>
+                    <div class="entry">
+                            <div class="pagination">
+                                    <span>« First</span>
+                                    <span class="active">1</span>
+                                    <a href="">2</a>
+                                    <a href="">3</a>
+                                    <a href="">4</a>
+                                    <span>...</span>
+                                    <a href="">23</a>
+                                    <a href="">24</a>
+                                    <a href="">Last »</a>
+                            </div>
+                            <div class="sep"></div>		
+                            <form action="" method="">
+                                <a class="button all" href="">All</a> <a class="button add" href="">Add</a> <a class="button ready" href="">Active</a> <a class="button trash" href="">Trash</a> 
+                                <div class="sep"></div>		
+                                <a class="button search" href="">Search</a> <input type="text" name="searchValue"/> <b>By :</b> <select class="styled-select" name="searchType"><option value="name">EID</option></select>
+                            </form> 
+                    </div>
+            </div>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

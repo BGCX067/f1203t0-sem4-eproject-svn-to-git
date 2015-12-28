@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/menuTemplate.xhtml">
+            
+        <ui:define name="tab">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="faces/UI/Guest/index.xhtml">Home Page</a></li>
+                        <li><a href="faces/UI/Guest/newsList.xhtml">Our News</a></li>
+                        <li><a href="faces/UI/Guest/guestMenu.xhtml">Our Employees</a></li>
+                      <li><a class="active" href="#">Our Insurances</a></li>
+                      <li class="last-item"><a href="faces/UI/Guest/contact.xhtml">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </ui:define>
+            <ui:define name="content">
+                <div class="indent">
+                    <h2>Our Insurances</h2>
+                    <div class="wrapper indent-bot">
+                      <div class="col-3">
+                        <div class="wrapper">
+                          <figure class="img-indent4"><img src="guest/source/images/page3-img5.png" alt="" /></figure>
+                          <div class="extra-wrap">
+                            <h6>Worldwide Travel Insurance</h6>
+                            Term policies issued by Pruco Life Insurance Company provide protection for a set period of time, such as 10, 20, or 30 years (or until age 65), and often provide the most coverage for your premium dollar.  </div>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="wrapper">
+                          <figure class="img-indent3"><img src="guest/source/images/page3-img5.png" alt="" /></figure>
+                          <div class="extra-wrap">
+                            <h6>International Health and Medical Insurance</h6>
+                            Universal life insurance can help meet the needs of those who desire long-term death benefit protectionâ€”often with flexible premiums.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrapper indent-bot2">
+                      <div class="col-3">
+                        <div class="wrapper">
+                          <figure class="img-indent3"><img src="guest/source/images/page3-img5.png" alt="" /></figure>
+                          <div class="extra-wrap">
+                            <h6>Other International Insurance Products</h6>
+                            Variable universal life insurance offers a choice of death benefit options and the potential to build non-guaranteed cash value based on the performance of investment options. </div>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="wrapper">
+                          <figure class="img-indent"><img src="guest/source/images/page3-img5.png" alt="" /></figure>
+                          <div class="extra-wrap">
+                            <h6>Annual Multi-Trip And Single Trip Travel Insurance</h6>
+                            Get fast quotes for three types of life insurance issued by Prudential. </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrapper p3">
+                      <div class="col-3">
+                        <div class="wrapper">
+                          <figure class="img-indent3"><img src="guest/source/images/page3-img5.png" alt="" /></figure>
+                          <div class="extra-wrap">
+                            <h6>Expatriate Health Insurance</h6>
+                            Use our Life Insurance Needs Estimator to determine how much life insurance you need to protect your family. </div>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="wrapper">
+                          <figure class="img-indent"><img src="guest/source/images/page3-img5.png" alt="" /></figure>
+                          <div class="extra-wrap">
+                            <h6>Income Protection Life Cover</h6>
+                            Term life, premiums, beneficiaries, and more. A guide to life insurance.  </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

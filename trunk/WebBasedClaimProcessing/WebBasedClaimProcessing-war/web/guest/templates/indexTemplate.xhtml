@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+    <head>
+        <ui:insert name="head">
+            <ui:include src="/guest/templates/headTemplate.xhtml"/>
+        </ui:insert>
+        <script type="text/javascript" src="/guest/source/js/tms-0.3.js"></script>
+        <script type="text/javascript" src="/guest/source/js/tms_presets.js"></script>
+        <script type="text/javascript" src="/guest/source/js/jquery.easing.1.3.js"></script>
+        <script src="/guest/source/sliderengine/jquery.js"></script>
+        <script src="/guest/source/sliderengine/amazingslider.js"></script>
+        <script src="/guest/source/sliderengine/initslider-1.js"></script>
+    </head>
+    <body id="page1">
+            <ui:insert name="page1">
+                <ui:include src="/guest/templates/bodyWithSliderTemplate.xhtml"/>
+            </ui:insert>
+    </body>
+</html>

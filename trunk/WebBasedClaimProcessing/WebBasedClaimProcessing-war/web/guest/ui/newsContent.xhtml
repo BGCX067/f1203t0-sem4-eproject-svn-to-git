@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:c="http://java.sun.com/jsf/core" xmlns:html="http://java.sun.com/jsf/html">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/contentTemplate.xhtml">
+            <ui:define name="content">
+                <div class="wrapper margin-bot">
+                    <div class="col-3">
+                      <div class="indent">
+                        <h2>Prosecutors give SAC settlement</h2>
+                        <p class="color-4">PaperPouche, the world's best-selling circuit maker, has launched a handset with a curved display screen. Called the Galaxy Round, the circuit will feature a 5.7in (14.5cm) display.</p>
+                        <div class="wrapper p2">
+                          <figure class="img-indent"><img src="guest/source/images/page4-img1.png" alt="" /></figure>
+                          <div class="extra-wrap"> The launch comes just days after rival IG said it would begin production of curved-screen phones next year. Digital display technology has been progressing towards curved screens. Both P2P and IG already offer curved organic light-emitting diode (OLED) television sets. </div>
+                        </div>
+                        P2P said the curved screen display would help consumers use some of the features on the phone, including those that enable users to check information such as date, time and missed calls when home screen is off, with more ease. At the same time, users can also change music tracks on their phone, even while its display is off. The Galaxy Round will initially be launched only in South Korea. The firm gave no indication of its plans for a global launch.  </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="block-news">
+                        <h3 class="color-4 p2">News List</h3>
+                        <ul class="list-2">
+                          <li><a href="#">Royal Mail staff take up share offer</a></li>
+                          <li><a href="#">Euro MPs tighten anti-tobacco laws</a></li>
+                          <li><a href="#">Robert Zoellick joins Goldman Sachs</a></li>
+                          <li><a href="#">Jobs boost as EnerMech seeks growth</a></li>
+                          <li><a href="#">Samsung devices face US import ban</a></li>
+                          <li><a href="#">Baked in Britain, the millionth Raspberry Pi</a></li>
+                          <li><a href="#">Airbus in $9.5bn Japan Airlines deal</a></li>
+                          <li><a href="#">Kate Moss in new Topshop tie-up</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

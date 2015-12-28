@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" 
+       xmlns:html="http://java.sun.com/jsf/html"
+       xmlns:p="http://primefaces.org/ui"
+       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/formTemplate.xhtml">
+            <ui:define name="tab">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="Redirect?page=index">Home Page</a></li>
+                        <li><a href="Redirect?page=newsList">Our News</a></li>
+                           <c:if test="${sessionScope.user == null}">
+                        <li><a class="active" href="Redirect?page=guestMenu">Our Employees</a></li>
+                        </c:if>
+                         <c:if test="${sessionScope.user != null}">
+                        <li><a class="active" href="Redirect?page=employeeMenu">Our Employees</a></li>
+                        </c:if>
+                      <li><a href="Redirect?page=insuranceList">Our Insurances</a></li>
+                      <li class ="last-item"><a href="Redirect?page=contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </ui:define>
+            <ui:define name="content">
+                <div class="wrapper margin-bot">
+                    <div class="col-3">
+                      <div class="indent">
+                        <h2 class="px">Edit Profile</h2>
+                        <form id="From" action="edituser" method="post" >
+                            <table class="tbl1">
+                                <input type="hidden" name="ssuser" value="${sessionScope.user}"/>
+                                <tr>
+                                    <td class="rc">Email </td>
+                                    <td><input type="text" name="txtemail" class="validate[required,custom[email],maxSize[30]] text-input"/></td>
+                                </tr>
+                                <tr>
+                                    <td class="rc">Address </td>
+                                     <td><textArea style="resize: non" name="txtaddress" class="validate[required,maxSize[30]] text-input"/></td>
+                                </tr>
+                                <tr>
+                                    <td class="rc">Phone Number </td>
+                                    <td><input type="text" name="txtphone" class="validate[required,custom[number],minSize[9],maxSize[12]] text-input"/></td>
+                                </tr>
+                                <tr>
+                                    <td class="rc">Image </td>
+                                    <td><input type="file" name="image" class="validate[required]"/></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><div class="buttons"> <input class="button-2" type="reset" value="Clear"/><input class="button-2" type="submit" value="Submit" name="action"/></div></td>
+                                </tr>
+                            </table>
+                          </form>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="block-news">
+                        <h3 class="color-4 indent-bot2">Regulations </h3>
+                        <dl class="contact p3">
+                          <dt><span>Email:</span>username@domain.com</dt>
+                          <dd><span>Phone Number :</span>+XXX (XX) XXX-XXXX</dd>
+                          <dd><span>Image: </span>.png files only</dd>
+                          <dd><span><b>Notice</b></span><text style="color: red">All fields are required!</text></dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <div>Register</div>
+        <form action="Register" method="post">
+            <table border="1">
+                                <tr>
+                                    <td>Username </td>
+                                    <td><input type="text" name="username"/></td>
+                                    <td> <c:if test="${usernameError!=null}"><label style="color: red">${usernameError}</label> </c:if></td>
+                                </tr>
+                                <tr>
+                                    <td>Password </td>
+                                    <td><input type="password" name="password"/></td>
+                                    <td><c:if test="${passwordError!=null}"><label style="color: red">${passwordError}</label> </c:if></td>
+                                </tr>
+                                <tr>
+                                    <td>Employee ID </td>
+                                    <td><input type="text" name="EID"/></td>
+                                    <td><c:if test="${eidError!=null}"><label style="color: red">${eidError}</label> </c:if></td>
+                                </tr>
+                                <tr>
+                                    <td>Account Code </td>
+                                    <td><input type="text" name="accountCode"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Email </td>
+                                    <td><input type="text" name="email"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Address </td>
+                                    <td><input type="text" name="address"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Phone Number </td>
+                                    <td><input type="text" name="phoneNumber"/></td>
+                                </tr>
+            </table>
+             
+            <input type="submit"  value="Submit"/>
+            <h6 ><c:if test="${eidcodeError!=null}"><label style="color: red">${eidcodeError}</label> </c:if></h6>
+        </form>
+    </body>
+</html>

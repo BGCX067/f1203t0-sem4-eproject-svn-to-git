@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition>
+            <div class="bg">
+                <div class="main">
+                    <header>
+                        <div class="row-1">
+                            <h1>
+                                <strong class="footer-logo">P2P.<strong>co</strong></strong>
+                                <strong class="slog">The most creative ideas</strong>
+                            </h1>
+                        </div>
+                        <div id="tab" class="row-2">
+                            <ui:insert name="tab">
+                                <ui:include src="/guest/templates/tabTemplate.xhtml"/>
+                            </ui:insert>
+                        </div>
+                        <div class="row-3">
+                            <div class="slider-wrapper">
+                                <div class="slider">
+                                    <ul class="item-1">
+                                       <li><img src="guest/source/images/slider1.PNG" alt=""/></li>
+                                    </ul>
+                                    <a class="prev" href="#">prev</a> <a class="next" href="#">prev</a> 
+                                </div>
+                              </div>
+                        </div>
+                    </header>
+                    <section id="content">
+                        <div class="padding">
+                            <ui:insert name="content"></ui:insert>
+                        </div>
+                    </section>
+                    <footer>
+                        <div class="row-top">
+                            <div class="row-padding">
+                              <div class="wrapper">
+                                <div class="col-1">
+                                  <h4>Address:</h4>
+                                  <dl class="address">
+                                    <dt><span>Country:</span>USA</dt>
+                                    <dd><span>City:</span>San Diego</dd>
+                                    <dd><span>Address:</span>Beach st. 54</dd>
+                                    <dd><span>Email:</span><a href="#">p2pco@mail.com</a></dd>
+                                  </dl>
+                                </div>
+                                <div class="col-2">
+                                  <h4>Follow Us:</h4>
+                                  <ul class="list-services">
+                                    <li class="item-1"><a href="#">Facebook</a></li>
+                                    <li class="item-2"><a href="#">Twitter</a></li>
+                                    <li class="item-3"><a href="#">LinkedIn</a></li>
+                                  </ul>
+                                </div>
+                                <div class="col-3">
+                                  <h4>Why Us:</h4>
+                                  <ul class="list-1">
+                                    <li><a href="#">Quick Service</a></li>
+                                    <li><a href="#">Reliable</a></li>
+                                    <li><a href="#">Friendly</a></li>
+                                    <li><a href="#">Award Winning</a></li>
+                                  </ul>
+                                </div>
+                                <div class="col-4">
+                                  <div class="indent3"> <strong class="footer-logo" style="text-align: center">P2P.<strong>co</strong></strong> <strong class="phone"><strong>Toll Free:</strong> 1-800-567-8934</strong> </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="row-bot">
+                          <div class="aligncenter">
+                            <p class="p0">Copyright &#169; <a href="#">http://www.p2pcorporation.com</a> All Rights Reserved</p>
+                            Design by <a target="_blank" href="http://www.p2pcorporation.com/">Group 2</a><br/>
+                          </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+            <script type="text/javascript">Cufon.now();</script>
+            <script type="text/javascript">
+            $(function () {
+                $('.slider')._TMS({
+                    prevBu: '.prev',
+                    nextBu: '.next',
+                    playBu: '.play',
+                    duration: 800,
+                    easing: 'easeOutQuad',
+                    preset: 'simpleFade',
+                    pagination: false,
+                    slideshow: 3000,
+                    numStatus: false,
+                    pauseOnHover: true,
+                    banners: true,
+                    waitBannerAnimation: false,
+                    bannerShow: function (banner) {
+                        banner.hide().fadeIn(500)
+                    },
+                    bannerHide: function (banner) {
+                        banner.show().fadeOut(500)
+                    }
+                });
+            })
+            </script>
+        </ui:composition>
+    </body>
+</html>

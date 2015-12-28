@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/admin/templates/indexTemplate.xhtml">
+            <ui:define name="main">
+                <div class="full_w">
+                    <div class="h_title">FAQs List</div>
+                    <h2>Manage frequently asked questions</h2>
+                    <p>This panel allow you to manage all frequently asked questions.</p>
+
+                    <div class="entry">
+                            <div class="sep"></div>
+                    </div>
+                    <table>
+                            <thead>
+                                    <tr>
+                                            <th scope="col">No.</th>
+                                            <th scope="col">Question</th>
+                                            <th scope="col">Answer</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col" style="width: 65px;">Modify</th>
+                                    </tr>
+                            </thead>
+
+                            <tbody>
+                                    <tr>
+                                            <td class="align-center">1</td>
+                                            <td>Who owns P2P?</td>
+                                            <td>The P2P Company is a public company that trades its shares on the New York stock exchange - so we are 'owned' by our thousands of shareholders and investors around the world.</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                            <td class="align-center">2</td>
+                                            <td>What is P2P Zone?</td>
+                                            <td>Coke Zone is your virtual door to the P2P world, giving you access to great P2P promotions, events and experiences.Currently you can find P2P Zone codes on specially marked packs. You can earn points by entering these codes, to redeem for rewards and prize draws.</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>
+
+                                    <tr>
+                                            <td class="align-center">3</td>
+                                            <td>What is your annual turnover? </td>
+                                            <td>In 2010, The P2P Company's turnover (net operating revenue) was $35.119 billion, according to the 2010 annual review. </td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_error.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon edit" title="Edit"></a>
+                                                    <a href="#" class="table-icon restore" title="Restore"></a>
+                                            </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="align-center">4</td>
+                                            <td>Has P2P GB been involved in any fashion collaborations? </td>
+                                            <td>Yes. Over the years P2P Great Britain has worked on some exciting collaborations with a variety of British and international fashion brands.</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_error.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon restore" title="Restore"></a>
+                                            </td>
+                                    </tr>						
+                                    <tr>
+                                            <td class="align-center">5</td>
+                                            <td>How many countries sell P2P products? </td>
+                                            <td>P2P products are sold in more than 200 countries throughout the world, so it's difficult to think of a country where it's not available. Even in countries where we do not manufacture P2P, it is nearly always available, as many entrepreneurs will import it from neighbouring countries. </td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>
+                            </tbody>
+                    </table>
+                    <div class="entry">
+                            <div class="pagination">
+                                    <span>« First</span>
+                                    <span class="active">1</span>
+                                    <a href="">2</a>
+                                    <a href="">3</a>
+                                    <a href="">4</a>
+                                    <span>...</span>
+                                    <a href="">23</a>
+                                    <a href="">24</a>
+                                    <a href="">Last »</a>
+                            </div>
+                            <div class="sep"></div>		
+                            <form action="" method="">
+                                <a class="button all" href="">All</a> <a class="button ready" href="">Active</a> <a class="button trash" href="">Trash</a> <a class="button search" href="">Search</a> <input type="text" name="searchValue"/> <b>By :</b> <select class="styled-select" name="searchType"><option value="name">Question</option></select>
+                            </form> 
+                    </div>
+            </div>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

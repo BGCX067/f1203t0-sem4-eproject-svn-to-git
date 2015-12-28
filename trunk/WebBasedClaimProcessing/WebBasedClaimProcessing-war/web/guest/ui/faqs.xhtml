@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:c="http://java.sun.com/jsf/core" xmlns:html="http://java.sun.com/jsf/html">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/listTemplate.xhtml">
+            <ui:define name="content">
+                <div class="wrapper p4">
+                    <div class="col-3">
+                      <div class="indent">
+                        <h2>Frequently Asked Questions</h2>
+                        <div class="news indent-bot2">
+                          <time class="tdate-2" datetime="2011-05-22">22.05.2011</time>
+                          <p class="p1"><a href="#">How can I become an administrator on my Company Page?</a></p>
+                           Administrative rights are automatically granted to the creator of a Company Page as part of the creation process.  </div>
+                        <div class="news indent-bot2">
+                          <time class="tdate-2" datetime="2011-05-19">19.05.2011</time>
+                          <p class="p1"><a href="#">What can Company Page administrators do and how do I assign one?</a></p>
+                          Company administrators can edit Company Pages and assign other admins. If you're a Company Page administrator, you should see a blue Edit button in the top right corner of the page. </div>
+                        <div class="news indent-bot2">
+                          <time class="tdate-2" datetime="2011-05-14">14.05.2011</time>
+                          <p class="p1"><a href="#">How do I edit my Company Page?</a></p>
+                          You must be a Company Page administrator in order to edit your Company Page.  </div>
+                        <div class="news">
+                          <time class="tdate-2" datetime="2011-05-07">07.05.2011</time>
+                          <p class="p1"><a href="#"> How do employees show up on a Company Page?</a></p>
+                          Company Pages are designed to display current and former employees, alumni, or new hires. Only current employees should appear on your Company Page's landing page.  </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="block-news">
+                        <h3 class="color-4 p2">Archive</h3>
+                        <div class="wrapper indent-bot">
+                          <ul class="list-2">
+                            <li><a href="#">May 2011</a></li>
+                            <li><a href="#">April 2011</a></li>
+                            <li><a href="#">March 2011</a></li>
+                            <li><a href="#">February 2011</a></li>
+                            <li><a href="#">January 2011</a></li>
+                            <li><a href="#">December 2010</a></li>
+                            <li><a href="#">November 2010</a></li>
+                            <li><a href="#">October 2010</a></li>
+                            <li><a href="#">September 2010</a></li>
+                            <li><a href="#">August 2010</a></li>
+                            <li><a href="#">July 2010</a></li>
+                            <li><a href="#">June 2010</a></li>
+                          </ul>
+                        </div>
+                        <a class="button-2" href="#">Previous Years</a> </div>
+                    </div>
+                  </div>
+                <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

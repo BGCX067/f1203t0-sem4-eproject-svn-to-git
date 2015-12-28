@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:c="http://java.sun.com/jsf/core" xmlns:html="http://java.sun.com/jsf/html">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/contentTemplate.xhtml">
+            <ui:define name="content">
+                <div class="wrapper margin-bot">
+                    <div class="col-3" style="width: 920px">
+                      <div class="indent">
+                        <h2>Our Company</h2>
+                        <p class="color-4">PaperPouche (P2P) is a diversified global manufacturing and technology company. We offer a wide range of products and services in the industrial, commercial and consumer markets through our Process Management, Industrial Automation, Network Power, Climate Technologies, and Commercial and Residential Solutions businesses.</p>
+                        <div class="wrapper p2">
+                          <figure class="img-indent"><img src="guest/source/images/page4-img1.png" alt="" /></figure>
+                          <div class="extra-wrap"> Products developed from P2P's unique skills in analog-to-digital and digital-to-analog conversion technology have helped to produce state-of-the-art equipment, including electronic balances, scales, weighing indicators and blood pressure monitors. <br/>Our range allows users to measure accurately in innovative ways that fit their individual needs, while at the same time providing cost-effective, reliable and user-friendly products. </div>
+                        </div>
+                        P2P has built its reputation on a commitment to providing quality products and services while rapidly responding to international needs for innovative and accurate measurement tools. A primary strategy is superior customer satisfaction. <br/>P2P constantly analyzes market needs around the world to develop a full range of products for business, industry, education and healthcare use. </div>
+                    </div>
+                    
+                  </div>
+                <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

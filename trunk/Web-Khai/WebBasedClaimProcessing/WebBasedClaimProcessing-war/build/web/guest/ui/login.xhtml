@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <head>
+        <title>P2P Corporation</title>
+        <link rel="stylesheet" type="text/css" href="admin/source/css/login.css" media="screen" />
+    </head>
+    <body>
+        <div class="wrap">
+                <div id="content">
+                        <div id="main">
+                                <div class="full_w">
+                                        <form action="Login" method="post">
+                                                <label for="login">Username:</label>
+                                                <input id="login" name="user" type="text" class="text" />
+                                                <c:if test="${usernameError!=null}"><label style="color: red">${usernameError}</label> </c:if>
+                                                <label for="pass">Password:</label>
+                                                <input id="pass" name="pass" type="password" class="text" />
+                                                <c:if test="${passwordError!=null}"><label style="color: red">${passwordError}</label> </c:if>
+                                                <c:if test="${userpassError!=null}"><label style="color: red">${userpassError}</label> </c:if>
+                                                <div class="sep"></div>
+                                                <button type="submit" name="action" value="Login" class="ok">Login</button> <a class="button" href="guest/ui/retrievePassword.xhtml">Forgotten password?</a> 
+                                                <a class="button delete" href="Redirect?page=index">Cancel</a>
+                                        </form>
+                                </div>
+                                <div class="footer"> <a href="">http://p2pcorporation.com</a> | Guest Panel</div>
+                        </div>
+                </div>
+        </div>
+    </body>
+</html>

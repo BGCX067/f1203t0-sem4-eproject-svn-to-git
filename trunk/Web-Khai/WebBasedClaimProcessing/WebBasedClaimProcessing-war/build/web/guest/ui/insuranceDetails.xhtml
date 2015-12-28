@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:c="http://java.sun.com/jsf/core" xmlns:html="http://java.sun.com/jsf/html" xmlns:j="http://java.sun.com/jsp/jstl/core">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/contentTemplate.xhtml">
+             <ui:define name="tab">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="Redirect?page=index">Home Page</a></li>
+                        <li><a href="Redirect?page=newsList">Our News</a></li>
+                        <li><a href="Redirect?page=guestMenu">Our Employees</a></li>
+                      <li><a class="active" href="Redirect?page=insuranceList">Our Insurances</a></li>
+                      <li class="last-item"><a href="Redirect?page=contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </ui:define>
+            <ui:define name="content">
+                
+                 
+                <div class="wrapper margin-bot">
+                    <div class="col-3">
+                      <div class="indent">
+                        <h2>${list.insuranceTypeName}</h2>
+                        <p class="color-4"></p>
+                        <div class="wrapper p2">
+                          <figure class="img-indent"><img src="guest/source/images/page4-img1.png" alt="" /></figure>
+                          <div class="extra-wrap">${list.insuranceTypeContent} </div>
+                        
+                        </div>
+                          </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="block-news">
+                          <h3 class="color-4 p2" style="text-align: center">Insurance List</h3>
+                        <ul class="list-2">
+                            <j:forEach var="i" items="${all}">
+                          <li><a href="Redirect?page=insuranceDetails&amp;name=${i.insuranceTypeName}">${i.insuranceTypeName}</a></li>
+                          </j:forEach>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

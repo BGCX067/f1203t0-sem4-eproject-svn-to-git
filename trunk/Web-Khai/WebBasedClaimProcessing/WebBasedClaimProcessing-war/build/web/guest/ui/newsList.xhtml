@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:html="http://java.sun.com/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/listTemplate.xhtml">
+            <ui:define name="tab">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="Redirect?page=index">Home Page</a></li>
+                        <li><a class="active" href="Redirect?page=newsList">Our News</a></li>
+                        <li><a href="Redirect?page=guestMenu">Our Employees</a></li>
+                      <li><a href="Redirect?page=insuranceList">Our Insurances</a></li>
+                      <li class="last-item"><a href="Redirect?page=contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </ui:define>
+            <ui:define name="content">
+                <div class="wrapper p4">
+                    <div class="col-3">
+                      <div class="indent">
+                        <h2>Latest News</h2>
+                         <c:forEach var="n" items="${list}">
+                        <div class="news indent-bot2">
+                           
+                          <time class="tdate-2" datetime="2011-05-22">${n.newsCreatedDate}</time>
+                          <p class="p1"><a href="Redirect?page=newsContent&amp;title=${n.newsTitle}">${n.newsTitle}</a></p>
+                          ${n.newsDescription}
+                         
+                        </div>
+                        </c:forEach> 
+                      </div>
+                    </div>
+                    
+                  </div>
+                <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

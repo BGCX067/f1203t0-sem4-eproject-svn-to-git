@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/menuTemplate.xhtml">
+            <ui:define name="tab">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="Redirect?page=index">Home Page</a></li>
+                        <li><a href="Redirect?page=newsList">Our News</a></li>
+                        <li><a class="active" href="Redirect?page=guestMenu">Our Employees</a></li>
+                      <li><a href="Redirect?page=insuranceList">Our Insurances</a></li>
+                      <li class="last-item"><a href="Redirect?page=contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </ui:define>
+            <ui:define name="content">
+                <div class="indent">
+                    <h2><a href="#">${sessionScope.user}</a></h2>
+                    <div class="wrapper indent-bot">
+                      <div class="col-3">
+                        <div class="wrapper">
+                          <figure class="img-indent4"><img src="guest/source/images/page3-img6.png" alt="" /></figure>
+                          <div class="extra-wrap">
+                            <h6>Edit Profile</h6>
+                            Click here to edit your profile. </div>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="wrapper">
+                          <figure class="img-indent3"><img src="guest/source/images/page3-img2.png" alt="" /></figure>
+                          <div class="extra-wrap">
+                            <h6>Edit Password</h6>
+                            Click here to change your password.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrapper indent-bot2">
+                      <div class="col-3">
+                        <div class="wrapper">
+                          <figure class="img-indent3"><img src="guest/source/images/page3-img4.png" alt="" /></figure>
+                          <div class="extra-wrap">
+                            <h6>Claim Insurance</h6>
+                            Click here to claim your insurance. </div>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="wrapper">
+                          <figure class="img-indent"><img src="guest/source/images/page3-img3.png" alt="" /></figure>
+                          <div class="extra-wrap">
+                              <h6><a href="Redirect?page=viewClaims&amp;username=${user}">View Claims</a></h6>
+                            Click here to view your claim history. </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrapper p3">
+                      <div class="col-3">
+                        <div class="wrapper">
+                          <figure class="img-indent3"><img src="guest/source/images/page3-img5.png" alt="" /></figure>
+                          <div class="extra-wrap">
+                            <h6>FAQs</h6>
+                            Click  here to view frequently asked questions. </div>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="wrapper">
+                          <figure class="img-indent"><img src="guest/source/images/page3-img1.png" alt="" /></figure>
+                          <div class="extra-wrap">
+                            <h6>Logout</h6>
+                            Click here to logout. </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

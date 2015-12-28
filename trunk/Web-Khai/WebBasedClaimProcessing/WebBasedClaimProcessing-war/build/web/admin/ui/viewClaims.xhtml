@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/admin/templates/indexTemplate.xhtml">
+            <ui:define name="main">
+                <div class="full_w">
+                    <div class="h_title">Claim List</div>
+                    <h2>Manage claims</h2>
+                    <p>This panel allows you to manage all insurance claims from employees.</p>
+
+                    <div class="entry">
+                            <div class="sep"></div>
+                    </div>
+                    <table>
+                        <thead>
+                                    <tr>
+                                            <th scope="col">No.</th>
+                                            <th scope="col">Username</th>
+                                            <th scope="col">Policy Number</th>
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Reason</th>
+                                            <th scope="col">Amount</th>
+                                            <th scope="col">CStt</th>
+                                            <th scope="col" style="width: 20px">Status</th>
+                                            <th scope="col" style="width: 40px;">Modify</th>
+                                    </tr>
+                            </thead>
+
+                            <tbody>
+                                    <tr>
+                                            <td class="align-center">1</td>
+                                            <td>guest01</td>
+                                            <td>12323232323234</td>
+                                            <td>Accident</td>
+                                            <td>12-07-2009</td>
+                                            <td>Car crash</td>
+                                            <td>$1200</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_approved.png"/></td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                            <td class="align-center">2</td>
+                                            <td>em01</td>
+                                            <td>34243564646464</td>
+                                            <td>Illness</td>
+                                            <td>03-10-1999</td>
+                                            <td>Lung Cancer</td>
+                                            <td>$2000</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_approved.png"/></td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>
+
+                                    <tr>
+                                            <td class="align-center">3</td>
+                                            <td>guest101</td>
+                                            <td>98374854938273</td>
+                                            <td>Property Damage</td>
+                                            <td>12-11-2007</td>
+                                            <td>Broken Desk</td>
+                                            <td>$2700</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_denied.png"/></td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_error.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon restore" title="Restore"></a>
+                                            </td>
+                                    </tr>
+
+                                    <tr>
+                                            <td class="align-center">4</td>
+                                            <td>Hanna12</td>
+                                            <td>64620384938493</td>
+                                            <td>Illness</td>
+                                            <td>08-09-2004</td>
+                                            <td>Heart Attack</td>
+                                            <td>$1300</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_process.png"/></td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon approve" title="Approve"></a>
+                                                    <a href="#" class="table-icon deny" title="Deny"></a>
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>						
+                                    <tr>
+                                            <td class="align-center">5</td>
+                                            <td>PeterPan</td>
+                                            <td>83948374837401</td>
+                                            <td>Death</td>
+                                            <td>09-11-2013</td>
+                                            <td>Father Deceased</td>
+                                            <td>$2500</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_approved.png"/></td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>
+                            </tbody>
+                    </table>
+                    <div class="entry">
+                            <div class="pagination">
+                                    <span>« First</span>
+                                    <span class="active">1</span>
+                                    <a href="">2</a>
+                                    <a href="">3</a>
+                                    <a href="">4</a>
+                                    <span>...</span>
+                                    <a href="">23</a>
+                                    <a href="">24</a>
+                                    <a href="">Last »</a>
+                            </div>
+                            <div class="sep"></div>		
+                            <form action="" method="">
+                                <a class="button all" href="">All</a> <a class="button approved" href="">Approved</a> <a class="button process" href="">In Process</a> <a class="button denied" href="">Denied</a> <a class="button ready" href="">Active</a> <a class="button trash" href="">Trash</a>
+                                <div class="sep"></div>
+                                <a class="button search" href="">Search</a> <input type="text" name="searchValue"/> <b>By</b> : <select class="styled-select" name="searchType"><option value="name">Username</option></select>
+                            </form>
+                    </div>
+            </div>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

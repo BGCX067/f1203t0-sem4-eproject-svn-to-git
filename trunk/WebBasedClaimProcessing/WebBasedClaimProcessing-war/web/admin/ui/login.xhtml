@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <head>
+        <title>P2P Corporation</title>
+        <link rel="stylesheet" type="text/css" href="admin/source/css/login.css" media="screen" />
+        <script>
+            function trim(s) 
+            {
+                return s.replace( /^s*/, "" ).replace( /s*$/, "" );
+            }
+
+            function validate()
+            {
+                if(trim(document.frmLogin.login.value)==="")
+                {
+                    alert("Username and Password cannot be empty. Please enter!");
+                    document.frmLogin.login.focus();
+                    return false;
+                }
+                else if(trim(document.frmLogin.pass.value)==="")
+                {
+                    alert("Password cannot be empty. Please enter!");
+                    document.frmLogin.pass.focus();
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+                <div id="content">
+                        <div id="main">
+                                <div class="full_w">
+                                    <c:set var="item" value="${requestScope.error}"/>
+                                    <c:if test="${!empty item}" >
+                                        <label style="color: #FF5252; font-size: 30">${error}</label>
+                                    </c:if>
+                                    <form name="frmLogin" action="Admin_login" method="post" onsubmit="return validate();">
+                                                <label for="login">Username:</label>
+                                                <input id="login" name="login" class="text" />
+                                                <label for="pass">Password:</label>
+                                                <input id="pass" name="pass" type="password" class="text" />
+                                                <div class="sep"></div>
+                                                <button type="submit" class="ok">Login</button>
+                                        </form>
+                                </div>
+                                <div class="footer"> <a href="">http://p2pcorporation.com</a> | Admin Panel</div>
+                        </div>
+                </div>
+        </div>
+    </body>
+</html>

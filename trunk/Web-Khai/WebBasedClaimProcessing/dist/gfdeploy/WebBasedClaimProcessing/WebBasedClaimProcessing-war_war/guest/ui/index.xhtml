@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:c="http://java.sun.com/jsf/core" xmlns:html="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <head>
+        <title>TODO supply a title</title>
+        <script type="text/javascript" src="/guest/source/js/tms-0.3.js"></script>
+        <script type="text/javascript" src="/guest/source/js/tms_presets.js"></script>
+        <script type="text/javascript" src="/guest/source/js/jquery.easing.1.3.js"></script>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/indexTemplate.xhtml">
+            <ui:define name="tab">
+                <nav>
+                    <ul class="menu">
+                        <html:form>
+                            <li><a class="active" href="Redirect?page=index">Our Company</a></li>
+                        <li><a href="Redirect?page=newsList">Our News</a></li>
+                        <li><a href="Redirect?page=guestMenu">Our Employees</a></li>
+                        <li><a href="Redirect?page=insuranceList">Our Insurances</a></li>
+                        <li class="last-item"><a href="Redirect?page=contact">Contact Us</a></li>
+                      </html:form>
+                    </ul>
+                </nav>
+            </ui:define>
+            <ui:define name="content">
+                <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+                <br/>
+                <div class="wrapper">
+                    <div class="col-3">
+                      <div class="indent">
+                        <h2>Our Mission</h2>
+                        <p class="color-4 p1">PaperPouche (P2P) is a diversified global manufacturing and technology company. We offer a wide range of products and services in the industrial, commercial and consumer markets through our Process Management, Industrial Automation, Network Power, Climate Technologies, and Commercial and Residential Solutions businesses.</p>
+                        <div class="wrapper">
+                            <figure class="img-indent3"><img src="guest/source/images/page1-img1.png" alt="" /></figure>
+                          <div class="extra-wrap">
+                            <div class="indent2"> Products developed from P2P's unique skills in analog-to-digital and digital-to-analog conversion technology have helped to produce state-of-the-art equipment, including electronic balances, scales, weighing indicators and blood pressure monitors. <br/>Our range allows users to measure accurately in innovative ways that fit their individual needs. </div>
+                          </div>
+                        </div>
+                        <a class="button-2" href="/guest/ui/aboutUs.xhtml">Read More</a> </div>
+                    </div>
+                    <div class="col-2">
+                      <div class="block-news">
+                        <h3 class="color-4 p2">Recent News</h3>
+                        <div class="wrapper p2">
+                          <time class="tdate-1 fleft" datetime="2011-05-29"><strong>29</strong>may</time>
+                          <div class="extra-wrap">
+                            <h5>Monsanto 4Q Loss Widens As Seed Sales Decline</h5>
+                            Monsanto reported worse-than-expected losses for its fiscal fourth quarter... <a href="#">more</a> </div>
+                        </div>
+                        <div class="wrapper">
+                          <time class="tdate-1 fleft" datetime="2011-05-24"><strong>24</strong>may</time>
+                          <div class="extra-wrap">
+                            <h5>Walgreen Earnings Boosted by Boots Stake, Inventory Benefit</h5>
+                            Walgreen's fiscal fourth-quarter earnings soared 86 percent... <a href="#">more</a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </ui:define>
+        </ui:composition>
+        <script type="text/javascript">Cufon.now();</script>
+        <script type="text/javascript">
+        $(function () {
+            $('.slider')._TMS({
+                prevBu: '.prev',
+                nextBu: '.next',
+                playBu: '.play',
+                duration: 800,
+                easing: 'easeOutQuad',
+                preset: 'simpleFade',
+                pagination: false,
+                slideshow: 3000,
+                numStatus: false,
+                pauseOnHover: true,
+                banners: true,
+                waitBannerAnimation: false,
+                bannerShow: function (banner) {
+                    banner.hide().fadeIn(500)
+                },
+                bannerHide: function (banner) {
+                    banner.show().fadeOut(500)
+                }
+            });
+        })
+        </script>
+    </body>
+</html>

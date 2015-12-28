@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:c="http://java.sun.com/jsf/core" xmlns:html="http://java.sun.com/jsf/html">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/guest/templates/contentTemplate.xhtml">
+            <ui:define name="content">
+                <div class="wrapper margin-bot">
+                    <div class="col-3" style="width: 920px">
+                      <div class="indent">
+                          <h2 style="margin-left: 100px">Claim List</h2>
+                        <div>
+                            <table class="tbl2" style="text-align: center;margin-left: 75px">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No.</th>
+                                        <th scope="col">Policy No.</th>
+                                        <th scope="col">Claim Date</th>
+                                        <th scope="col">Reason</th>
+                                        <th scope="col">Insurance Type</th>
+                                        <th scope="col">Amount</th>
+                                        <th scope="col">Max</th>
+                                        <th scope="col" style="width: 65px;">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="align-center">1</td>
+                                        <td>14839238439182</td>
+                                        <td>12-08-2012</td>
+                                        <td>Car accident</td>
+                                        <td>Accident</td>
+                                        <td>$2000</td>
+                                        <td>$2000</td>
+                                        <td>
+                                            <img src="admin/source/img/i_ok.png"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">2</td>
+                                        <td>14938493847385</td>
+                                        <td>10-08-2008</td>
+                                        <td>Cancer Treatment</td>
+                                        <td>Illness</td>
+                                        <td>$3000</td>
+                                        <td>$3500</td>
+                                        <td>
+                                                <img src="admin/source/img/i_add.png"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">3</td>
+                                        <td>23948394839281</td>
+                                        <td>04-03-2012</td>
+                                        <td>Wife Deceased</td>
+                                        <td>Death</td>
+                                        <td>$33000</td>
+                                        <td>$3000</td>
+                                        <td>
+                                                <img src="admin/source/img/i_error.png"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">4</td>
+                                        <td>293840394839438</td>
+                                        <td>12-11-2003</td>
+                                        <td>House Fire</td>
+                                        <td>Accident</td>
+                                        <td>$1900</td>
+                                        <td>$2000</td>
+                                        <td>
+                                                <img src="admin/source/img/i_ok.png"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">5</td>
+                                        <td>39283928392839</td>
+                                        <td>01-01-2011</td>
+                                        <td>Cubicle Damaged</td>
+                                        <td>Accident</td>
+                                        <td>$2200</td>
+                                        <td>$2100</td>
+                                        <td>
+                                                <img src="admin/source/img/i_add.png"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+			</div>
+                      </div>
+                    </div>
+                  </div>
+                  <ui:insert name="box">
+                    <ui:include src="/guest/templates/boxTemplate.xhtml"/>
+                </ui:insert>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

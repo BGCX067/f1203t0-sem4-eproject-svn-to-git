@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <ui:composition template="/admin/templates/indexTemplate.xhtml">
+            <ui:define name="main">
+                <div class="full_w">
+                    <div class="h_title">Contact List</div>
+                    <h2>Manage contacts</h2>
+                    <p>This panel allows you to manage all guest contacts.</p>
+
+                    <div class="entry">
+                            <div class="sep"></div>
+                    </div>
+                    <table>
+                            <thead>
+                                    <tr>
+                                            <th scope="col">No.</th>
+                                            <th scope="col">Title</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Content</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col" style="width: 65px;">Modify</th>
+                                    </tr>
+                            </thead>
+
+                            <tbody>
+                                    <tr>
+                                            <td class="align-center">1</td>
+                                            <td>Business Stuff</td>
+                                            <td>Powel Man</td>
+                                            <td>powelman@gmail.com</td>
+                                            <td>I would like to join your company. What do I need to apply?</td>
+                                            <td>12-09-2010</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                            <td class="align-center">2</td>
+                                            <td>Find my friend</td>
+                                            <td>Jane Nowel</td>
+                                            <td>janenowel@yahoo.com</td>
+                                            <td>My friend is working for your company. Can I get his contact information?</td>
+                                            <td>19-01-2002</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>
+
+                                    <tr>
+                                            <td class="align-center">3</td>
+                                            <td>What is your secret?</td>
+                                            <td>Marry Jane</td>
+                                            <td>marryjane@yahoo.com</td>
+                                            <td>I heard this company is doing well. What is your secret?</td>
+                                            <td>19-01-2012</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>
+
+                                    <tr>
+                                            <td class="align-center">4</td>
+                                            <td>What is my chance?</td>
+                                            <td>Max Pain</td>
+                                            <td>maxpain@gmail.com</td>
+                                            <td>I'm a freshman. Am I eligible to apply for your company?</td>
+                                            <td>01-01-2000</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_error.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon restore" title="Restore"></a>
+                                            </td>
+                                    </tr>						
+                                    <tr>
+                                            <td class="align-center">5</td>
+                                            <td>I love your office</td>
+                                            <td>Brienne Kotch</td>
+                                            <td>briennekotch@hotmail.com</td>
+                                            <td>I think your building is the most beautiful in the city.</td>
+                                            <td>09-12-2010</td>
+                                            <td style="text-align:center "><img src="admin/source/img/i_ok.png"/></td>
+                                            <td style="text-align:center ">
+                                                    <a href="#" class="table-icon delete" title="Delete"></a>
+                                            </td>
+                                    </tr>
+                            </tbody>
+                    </table>
+                    <div class="entry">
+                            <div class="pagination">
+                                    <span>« First</span>
+                                    <span class="active">1</span>
+                                    <a href="">2</a>
+                                    <a href="">3</a>
+                                    <a href="">4</a>
+                                    <span>...</span>
+                                    <a href="">23</a>
+                                    <a href="">24</a>
+                                    <a href="">Last »</a>
+                            </div>
+                            <div class="sep"></div>		
+                            <form action="" method="">
+                                <a class="button all" href="">All</a> <a class="button ready" href="">Active</a> <a class="button trash" href="">Trash</a> <a class="button search" href="">Search</a> <input type="text" name="searchValue"/> <b>By :</b> <select class="styled-select" name="searchType"><option value="name">Title</option></select>
+                            </form> 
+                    </div>
+            </div>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>
